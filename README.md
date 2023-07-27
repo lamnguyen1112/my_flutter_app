@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## Fix when dont have Runner 
+flutter create .
+[referrence](https://stackoverflow.com/questions/62098118/flutter-cannot-build-ios-project)
