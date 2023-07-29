@@ -1,4 +1,5 @@
 import 'package:component_library/component_library.dart';
+import 'package:example/story_component.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,17 +9,9 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Demo Example Component',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Demo Example Component'),
-    );
+    return const StoryComponent();
   }
 }
 
