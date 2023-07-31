@@ -13,8 +13,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: MyTitle(value: 'Hello world')),
+    final l10n = ComponentLocalizations.of(context);
+    return Scaffold(
+      body: Center(child: MyTitle(value: l10n.homeTitle)),
     );
   }
 }

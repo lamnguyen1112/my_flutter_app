@@ -1,3 +1,4 @@
+import 'package:component_library/component_library.dart';
 import 'package:example/stories.dart';
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:component_library/component_library.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +9,7 @@ List<Story> getStories() {
     Story(
         name: 'My Title',
         builder: (context) {
-          return const MyTitle(value: 'Hello world');
+          return MyTitle(value: "Hello world");
         }),
     Story(
         name: 'Button',
