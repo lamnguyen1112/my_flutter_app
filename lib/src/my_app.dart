@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/src/home_page.dart';
 import 'package:component_library/component_library.dart';
+import 'package:my_flutter_app/src/main_tab_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       localizationsDelegates: ComponentLocalizations.localizationsDelegates,
       supportedLocales: ComponentLocalizations.supportedLocales,
-      home: HomePage(),
+      locale: Locale('en'),
+      home: MainTabScreen(),
     );
   }
 }
