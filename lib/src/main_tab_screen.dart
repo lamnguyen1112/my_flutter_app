@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/src/about_page.dart';
 import 'package:my_flutter_app/src/basic_list_page.dart';
 import 'package:my_flutter_app/src/home_page.dart';
+import 'package:my_flutter_app/src/menu_drawer.dart';
 
 class MainTabScreen extends StatefulWidget {
   const MainTabScreen({super.key});
@@ -27,6 +28,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MenuDrawer(),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue[100],
