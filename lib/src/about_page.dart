@@ -6,9 +6,10 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: MyTitle(value: 'About Page'),
+    return Scaffold(
+      appBar: AppBar(title: const Text('About')),
+      body: const Center(
+        child: MyTitle(value: 'About Screen'),
       ),
     );
   }

@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final l10n = ComponentLocalizations.of(context);
     return Scaffold(
+      appBar: AppBar(title: Text(l10n.homeTitle)),
       body: Center(child: MyTitle(value: l10n.homeTitle)),
     );
   }
