@@ -15,8 +15,8 @@ class _MainTabScreenState extends State<MainTabScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    AboutPage(),
-    BasicListPage()
+    BasicListPage(),
+    AboutPage()
   ];
 
   void _onItemTapped(int index) {
@@ -29,6 +29,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MenuDrawer(),
+      drawerEnableOpenDragGesture: false,
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue[100],
@@ -37,8 +38,8 @@ class _MainTabScreenState extends State<MainTabScreen> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'About'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Basic List')
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Basic List'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'About')
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

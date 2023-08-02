@@ -16,6 +16,7 @@ dependencies:
     path: packages/component_library
   routemaster: ^1.0.1
   cupertino_icons: ^1.0.2
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:

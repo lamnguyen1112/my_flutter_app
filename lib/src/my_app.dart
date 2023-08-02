@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:component_library/component_library.dart';
+import 'package:my_flutter_app/src/config/theme.dart';
 import 'package:my_flutter_app/src/main_tab_screen.dart';
 import 'package:my_flutter_app/src/splash_screen.dart';
 
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: themeData,
       localizationsDelegates: ComponentLocalizations.localizationsDelegates,
       supportedLocales: ComponentLocalizations.supportedLocales,
       locale: const Locale('en'),
