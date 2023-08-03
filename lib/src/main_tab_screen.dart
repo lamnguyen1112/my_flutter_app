@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/src/about_page.dart';
-import 'package:my_flutter_app/src/basic_list_page.dart';
+import 'package:my_flutter_app/src/screens/about/about_page.dart';
+import 'package:my_flutter_app/src/screens/list/basic_list_page.dart';
 import 'package:my_flutter_app/src/home_page.dart';
 import 'package:my_flutter_app/src/menu_drawer.dart';
 
