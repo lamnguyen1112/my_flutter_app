@@ -60,15 +60,18 @@ import 'component_localizations_vi.dart';
 /// be consistent with the languages listed in the ComponentLocalizations.supportedLocales
 /// property.
 abstract class ComponentLocalizations {
-  ComponentLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  ComponentLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
   static ComponentLocalizations of(BuildContext context) {
-    return Localizations.of<ComponentLocalizations>(context, ComponentLocalizations)!;
+    return Localizations.of<ComponentLocalizations>(
+        context, ComponentLocalizations)!;
   }
 
-  static const LocalizationsDelegate<ComponentLocalizations> delegate = _ComponentLocalizationsDelegate();
+  static const LocalizationsDelegate<ComponentLocalizations> delegate =
+      _ComponentLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -80,7 +83,8 @@ abstract class ComponentLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -112,34 +116,36 @@ abstract class ComponentLocalizations {
   String get homeTitle;
 }
 
-class _ComponentLocalizationsDelegate extends LocalizationsDelegate<ComponentLocalizations> {
+class _ComponentLocalizationsDelegate
+    extends LocalizationsDelegate<ComponentLocalizations> {
   const _ComponentLocalizationsDelegate();
 
   @override
   Future<ComponentLocalizations> load(Locale locale) {
-    return SynchronousFuture<ComponentLocalizations>(lookupComponentLocalizations(locale));
+    return SynchronousFuture<ComponentLocalizations>(
+        lookupComponentLocalizations(locale));
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'vi'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['en', 'vi'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_ComponentLocalizationsDelegate old) => false;
 }
 
 ComponentLocalizations lookupComponentLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en': return ComponentLocalizationsEn();
-    case 'vi': return ComponentLocalizationsVi();
+    case 'en':
+      return ComponentLocalizationsEn();
+    case 'vi':
+      return ComponentLocalizationsVi();
   }
 
   throw FlutterError(
-    'ComponentLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'ComponentLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }
